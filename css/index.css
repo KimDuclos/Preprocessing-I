@@ -160,7 +160,6 @@ body {
   .container {
     max-width: 500px;
     height: auto;
-    background-color: lightgray;
   }
 }
 .container nav {
