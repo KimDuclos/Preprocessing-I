@@ -57,9 +57,9 @@ html, body {
     height: 100%;
 }
 
-//*********************************MY CODE STARTS HERE*************************/
+//*********************************MY CODE STARTS HERE*************************
 
-//mixins
+//*******mixins********//
 .standard-color {
 	background-color: #b8d0ff;
 	border: .5px solid #8ca3d1;
@@ -75,9 +75,9 @@ html, body {
 	color: #646668;
 	line-height: 1.25rem;
 }
-// end mixins
+//******end mixins*******
 
-//main
+//****main
 .container {
 	width: 816px;
 	height: 1056;
@@ -86,6 +86,12 @@ html, body {
 	display: flex;
 	flex-direction: column;
 
+		@media (max-width: 500px){
+			width: 500px;
+			height: auto;
+			background-color: lightgray;
+		}
+
 			//nav
 			nav {
 				display: flex;
@@ -93,6 +99,11 @@ html, body {
 				justify-content: space-around;
 				width: 25%;
 				margin: 0% 0% 3% 72.2%;	
+
+				@media(max-width:500px){
+					width: auto;
+				}
+
 					a{
 						font-family: Arial, Helvetica, sans-serif;
 						color: black;
@@ -152,6 +163,9 @@ html, body {
 							.title-font();
 						}					}
 						p{
+							.small-font();
+						}
+						:link {
 							.small-font();
 						}
 					}

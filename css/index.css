@@ -156,12 +156,24 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 500px;
+    height: auto;
+    background-color: lightgray;
+  }
+}
 .container nav {
   display: flex;
   justify-content: flex-end;
   justify-content: space-around;
   width: 25%;
   margin: 0% 0% 3% 72.2%;
+}
+@media (max-width: 500px) {
+  .container nav {
+    width: auto;
+  }
 }
 .container nav a {
   font-family: Arial, Helvetica, sans-serif;
@@ -223,6 +235,11 @@ body {
   line-height: 1.25rem;
 }
 .container .middle-content p {
+  font-family: 'Rubik', sans-serif;
+  color: #646668;
+  line-height: 1.25rem;
+}
+.container .middle-content :link {
   font-family: 'Rubik', sans-serif;
   color: #646668;
   line-height: 1.25rem;
