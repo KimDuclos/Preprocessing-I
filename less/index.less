@@ -79,8 +79,8 @@ html, body {
 
 //****main
 .container {
-	width: 1000px;  //standard paper size for resume
-	height: auto; // initially set to standard paper size but adjusted to auto for viewport changes
+	width: 1000px; 
+	height: auto; 
 	margin: 0 auto;
 	padding: .5% 3% .5% 3%;
 	display: flex;
@@ -100,18 +100,13 @@ html, body {
 				justify-content: space-around;
 				width: 25%;
 				margin: 0% 0% 3% 72.2%;	
+				.small-font();
 				
 
 					a:link{ 
-						font-family: Arial, Helvetica, sans-serif;
-						color: black;
 						text-decoration: none;
 						margin-right: 5%;
 						.small-font();
-
-						@media(max-width:500px){
-							display: flex;
-							justify-content: center;
 					}	
 			}
 			//end nav
@@ -133,7 +128,7 @@ html, body {
 					}
 					p {
 						font-size: 16px;
-						font-family: Arial, Helvetica, sans-serif;
+						font-family: Arial, Helvetica, ;
 						margin-top: 2%;
 						.small-font;
 					}
