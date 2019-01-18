@@ -1,6 +1,6 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 html,
 body,
@@ -134,170 +134,310 @@ html,
 body {
   height: 100%;
 }
-.standard-color {
-  background-color: #b8d0ff;
-  border: 0.5px solid #8ca3d1;
+.nav-font {
+  color: black;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .title-font {
-  font-family: 'Dosis', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
+  color: #413a61;
+  font-size: 4rem;
+  font-family: 'Pacifico', cursive;
 }
-.small-font {
-  font-family: 'Rubik', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
+.second-title {
+  color: #413a61;
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+}
+.paragraph-font {
+  color: #413a61;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.standard-bg-color {
+  background-color: #a592a7;
+  border: 1px solid #5e525f;
+}
+.block-bg-color {
+  background-color: #e5d4e7;
+  border: 1px solid #5e525f;
 }
 .container {
-  width: 1000px;
-  height: auto;
-  margin: 0 auto;
-  padding: 0.5% 3% 0.5% 3%;
-  display: flex;
-  flex-direction: column;
+  max-width: 800px;
+  margin: auto;
+  padding: 2%;
+  font-size: 62.5%;
+  background-color: #a592a7;
+  border: 1px solid #5e525f;
 }
 @media (max-width: 500px) {
   .container {
-    max-width: 500px;
-    height: auto;
+    max-width: 100%;
   }
 }
 .container nav {
-  display: flex;
-  justify-content: flex-end;
-  justify-content: space-around;
-  width: 25%;
-  margin: 0% 0% 3% 72.2%;
-  font-family: 'Rubik', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
-}
-.container nav a:link {
+  text-align: center;
+  color: black;
+  font-size: 1rem;
   text-decoration: none;
-  margin-right: 5%;
-  font-family: 'Rubik', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media (max-width: 500px) {
+  .container nav {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.container nav a {
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+@media (max-width: 500px) {
+  .container nav a {
+    width: 99%;
+    text-align: center;
+    border: 0.5px solid black;
+    border-radius: 4px;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    margin-bottom: 1%;
+  }
 }
 .container .top-content {
-  width: 100%;
-  height: 60%;
-  background-color: #b8d0ff;
-  border: 0.5px solid #8ca3d1;
-  padding: 3%;
-}
-.container .top-content .main-text {
-  width: 100%;
-}
-.container .top-content h1 {
-  font-size: 46px;
-  margin-top: 2%;
-  font-family: 'Dosis', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
-}
-.container .top-content p {
-  font-size: 16px;
-  font-family: Arial, Helvetica, ;
-  margin-top: 2%;
-  font-family: 'Rubik', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
-}
-.container .top-content button {
-  background-color: gray;
-  height: 30px;
-  color: white;
-  border-radius: 4px;
-  margin-top: 3%;
-}
-.container .middle-content {
-  height: 30%;
-  margin-top: 4%;
-  margin-bottom: 3%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
-.container .middle-content .left-content {
-  width: 45%;
+@media (max-width: 500px) {
+  .container .top-content {
+    max-width: 100%;
+  }
 }
-.container .middle-content .left-content h1 {
-  font-size: 36px;
-  padding-bottom: 3%;
-  font-family: 'Dosis', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
-}
-.container .middle-content .left-content p {
-  font-family: 'Rubik', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
-}
-.container .middle-content .left-content :link {
-  font-family: 'Rubik', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
-}
-.container .middle-content .right-content {
-  width: 45%;
-}
-.container .middle-content .right-content h1 {
-  font-size: 20px;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.container .middle-content .right-content li {
-  background-color: #b8d0ff;
-  border: 0.5px solid #8ca3d1;
-  height: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 3% 0% 0% 3%;
-}
-.container .bottom-content {
-  padding-bottom: 5%;
-  margin-top: 1%;
-}
-.container .bottom-content h2 {
-  font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  padding-bottom: 2%;
-  font-family: 'Dosis', sans-serif;
-  color: #646668;
-  line-height: 1.25rem;
-}
-.container .bottom-content table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-.container .bottom-content th {
-  font-weight: bold;
-  text-align: left;
-  padding: 8px;
-}
-.container .bottom-content td {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-.container .bottom-content tr:nth-child(even) {
-  background-color: #b8d0ff;
-  border: 0.5px solid #8ca3d1;
-}
-.container footer {
-  background-color: gray;
-  width: 100%;
-  height: 8%;
-  color: white;
+.container .top-content .profile-pic {
+  max-width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  margin-top: 5%;
+}
+@media (max-width: 500px) {
+  .container .top-content .profile-pic {
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container .top-content .profile-pic img {
+    display: none;
+  }
+}
+.container .top-content .main-text {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 500px) {
+  .container .top-content .main-text {
+    width: 100%;
+    margin-top: 0%;
+  }
+}
+.container .top-content .main-text h1 {
+  color: #413a61;
+  font-size: 4rem;
+  font-family: 'Pacifico', cursive;
+  padding-bottom: 2%;
+  display: flex;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container .top-content .main-text h1 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+}
+.container .top-content .main-text p {
+  color: #413a61;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.25em;
+}
+.container .top-content .button {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  text-decoration: none;
+  font-size: 0.8rem;
   font-family: Arial, Helvetica, sans-serif;
 }
-.container footer small {
-  font-size: 12px;
-  color: white;
+.container .top-content .btn {
+  background-color: #413a61;
+  border: none;
+  color: #ebe2ec;
+  height: 30px;
+  width: 100px;
+  border-radius: 4px;
+  padding: 1% 0.5% 0.5% 0.5%;
+  margin-left: 44%;
+}
+@media (max-width: 500px) {
+  .container .top-content .btn {
+    padding-top: 1.8%;
+    margin-left: 39%;
+  }
+}
+.container .middle-content {
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #e5d4e7;
+  border: 1px solid #5e525f;
+}
+@media (max-width: 500px) {
+  .container .middle-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.container .middle-content .left-content {
+  width: 49%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 2%;
+}
+@media (max-width: 500px) {
+  .container .middle-content .left-content {
+    width: 100%;
+  }
+}
+.container .middle-content .left-content h1 {
+  color: #413a61;
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 2%;
+}
+@media (max-width: 500px) {
+  .container .middle-content .left-content h1 {
+    font-size: 1.4rem;
+  }
+}
+.container .middle-content .left-content p {
+  color: #413a61;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container .middle-content .right-content {
+  width: 49%;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container .middle-content .right-content {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    font-size: 1.4rem;
+  }
+}
+.container .middle-content .right-content h1 {
+  color: #413a61;
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 2%;
+}
+@media (max-width: 500px) {
+  .container .middle-content .right-content h1 {
+    font-size: 1.4rem;
+  }
+}
+.container .middle-content .right-content .skills {
+  color: #413a61;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding-top: 2%;
+  line-height: 1.8rem;
+}
+@media (max-width: 500px) {
+  .container .middle-content .right-content .skills {
+    font-size: 1.4rem;
+  }
+}
+.container .middle-content .right-content .skills li {
+  max-width: 49%;
+  font-size: 1.4rem;
+}
+@media (max-width: 500px) {
+  .container .middle-content .right-content .skills li {
+    width: 49%;
+    font-size: 1.4rem;
+  }
+}
+.container .bottom-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 2%;
+  text-align: center;
+}
+.container .bottom-content h1 {
+  color: #413a61;
+  font-size: 2rem;
+  font-family: 'Pacifico', cursive;
+  padding-bottom: 2%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .container .bottom-content h1 {
+    max-width: 100px;
+    font-size: 1.4rem;
+    margin: 2% 0 2% 39% ;
+  }
+}
+.container .bottom-content .table-box {
+  color: #413a61;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+@media (max-width: 500px) {
+  .container .bottom-content .table-box {
+    width: 100%;
+  }
+}
+.container .bottom-content .table-box table {
+  width: 100%;
+  text-align: left;
+  border: 1px solid black;
+}
+.container .bottom-content .table-box table th,
+.container .bottom-content .table-box table td {
+  padding: 2%;
+}
+.container .bottom-content .table-box table tr:nth-child(even) {
+  background-color: #e5d4e7;
+  border: 1px solid #5e525f;
+}
+.container footer {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
