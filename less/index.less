@@ -1,7 +1,6 @@
-// Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+v2.0 | 20110126
+License: none (public domain)
 */
 
 html, body, div, span, applet, object, iframe,
@@ -17,43 +16,374 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+display: block;
 }
 body {
-	line-height: 1;
+line-height: 1;
 }
 ol, ul {
-	list-style: none;
+list-style: none;
 }
 blockquote, q {
-	quotes: none;
+quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+content: '';
+content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+border-collapse: collapse;
+border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+height: 100%;
 }
 
+//*********MY CODE STARTS HERE***********//
+
+//**variables**//
+
+@nav-color: black;
+@title-color:  rgb(65, 58, 97);
+
+@nav-font: 1rem;
+@title-font: 4rem;
+@second-title: 1rem;
+
+//**Mixins**//
+ 
+.nav-font {
+color: @nav-color;
+font-size: @nav-font;
+text-decoration: none;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-font {
+color: @title-color;
+font-size: 4rem;
+font-family: 'Pacifico', cursive;
+}
+
+.second-title {
+color: @title-color;
+font-size: 2rem;
+font-family: 'Pacifico', cursive;
+}
+
+.paragraph-font {
+color: @title-color;
+font-size: 1rem;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.standard-bg-color {
+    background-color: rgb(165, 146, 167);
+    border: 1px solid rgb(94, 82, 95);
+}
+
+.block-bg-color {
+    background-color: rgb(229, 212, 231);
+    border: 1px solid rgb(94, 82, 95);
+}
+
+//**End Mixins**//
+
+.container {  //container start
+    max-width: 800px;
+    margin: auto;
+    padding: 2%;
+    font-size: 62.5%;
+    .standard-bg-color;
+    
+    @media (max-width: 500px){ // start media
+        max-width: 100%;
+    }  // end media
+
+nav { // nav start
+    text-align: center;
+    .nav-font;
+
+        @media (max-width: 500px){ //media start
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        } //media end
+
+    a { // a start
+        text-decoration: none;
+        font-size: 1.4rem;
+
+        @media(max-width: 500px){
+            width: 99%;
+            text-align: center;
+            border: .5px solid black;
+            border-radius: 4px;
+            padding-bottom: 1%;
+            padding-top: 1%;
+            margin-bottom: 1%;
+        } // media end
+    } // a end
+} // nav end
+
+.top-content { //top content start
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+        @media (max-width: 500px){
+            max-width: 100%;
+        }
+
+    .profile-pic { // img start
+       max-width: 100%;
+       display: flex;
+       justify-content: center;
+       margin-top: 5%;
+
+       @media(max-width: 500px){ // start media
+            max-width: 100%;
+        } // end media
+
+        img {  // start img 
+            @media (max-width: 500px){ // start media
+                display: none;
+            } // end media
+        } // start img
+    } // end profile pic
+
+    .main-text { //start main text
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 500px) { // start media
+            width: 100%;
+            margin-top: 0%;
+        } // end media
+
+
+        h1 { // start h1
+            .title-font;
+            padding-bottom: 2%;
+            display: flex;
+            text-align: center;
+
+            @media (max-width: 500px){ // start media
+                font-size: 1.4rem;
+                text-align: center;
+            } // end media
+        } // end h1
+
+        p { // start p
+            .paragraph-font;
+            line-height: 1.25em;
+        } // end p
+    
+    } // end main text
+
+    .button { // start button
+        margin-top: 2%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+        text-decoration: none;
+        font-size: .8rem;
+        font-family: Arial, Helvetica, sans-serif;
+    } // end button
+
+    .btn {
+        background-color: @title-color;
+        border: none;
+        color: rgb(235, 226, 236);
+        height: 30px;
+        width: 100px;
+        border-radius: 4px;
+        padding: 1% .5% .5% .5%;
+        margin-left: 44%;
+
+        @media(max-width: 500px) {
+            padding-top: 1.8%;
+            margin-left: 39%;
+        } 
+    }
+
+} //top content end
+
+.middle-content { // start middle content
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .block-bg-color;
+
+    @media (max-width: 500px){ // start media
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    } // end media
+
+    .left-content {  //start left content
+        width: 49%;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 2%;
+
+        @media (max-width: 500px){ // start media
+            width: 100%;
+        } // end media
+
+        h1 { // start h1
+            .second-title;
+            margin-bottom: 2%;
+
+            @media (max-width: 500px){ // start media
+                font-size: 1.4rem;
+            }  // end media
+        } // end h1
+
+        p{ // start p
+            .paragraph-font;
+        } // end p
+
+    } // end left content
+
+    .right-content {  // start right content
+        width: 49%;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @media (max-width: 500px){ // start media
+            width: 100%;
+            display: flex;
+            align-content: center;
+            font-size: 1.4rem;
+        } // end media
+
+        h1 { // start h1
+            .second-title;
+            margin-bottom: 2%;
+
+            @media (max-width: 500px){ // start media
+                font-size: 1.4rem;
+            }  // end media
+        } // end h1
+        
+        .skills{ // start skills
+            .paragraph-font;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            padding-top: 2%;
+            line-height: 1.8rem;
+
+            @media (max-width: 500px) { //start media
+                font-size: 1.4rem;
+            } // end media
+
+            li { // stat li
+                max-width: 49%;
+                font-size: 1.4rem;
+
+                @media (max-width: 500px){ // start media
+                    width: 49%;
+                    font-size: 1.4rem
+                } // end media
+            } // end li
+        } // end ul
+
+    } // end right content
+
+} // end middle content
+
+//***bottom content***
+.bottom-content {  // start bottom content //
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 2%;
+    text-align: center;
+
+    @media (max-width: 500px){
+        
+    }
+
+    h1 { //h1 start
+        .second-title;
+        padding-bottom: 2%;
+        text-align: center;
+
+        @media (max-width: 500px){ // start media
+            max-width: 100px;
+            font-size: 1.4rem;
+            margin: 2% 0 2% 39% ;
+        } // end media
+    } //h1 end
+
+    .table-box { // table start
+        .paragraph-font;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+
+        @media (max-width: 500px){ // start media
+            width: 100%;
+        } // media end
+
+        table { //table start
+            width: 100%;
+            text-align: left;
+            border: 1px solid black;
+
+            th, td { // start tr
+                padding: 2%;
+            } // end tr
+
+            tr:nth-child(even) { //start tr nth
+                .block-bg-color;
+              } // end tr nth
+
+        } // table end
+
+    } // table-box end
+
+} // end bottom content
+
+footer { // start footer
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2%;
+    margin-bottom: 2%;
+} // end footer
+
+
+
+} // container end
